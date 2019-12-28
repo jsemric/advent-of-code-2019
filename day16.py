@@ -1,3 +1,4 @@
+from functools import lru_cache
 import numpy as np
 from utils import lmap
 
@@ -29,6 +30,7 @@ def task1(inp):
 
     return int(''.join([str(i) for i in inp[:8]]))
 
+@lru_cache(maxsize=None)
 def generate_pattern(i):
     return [1]*i + [0]*i +[-1]*i +[0]*i
 
