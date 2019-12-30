@@ -1,4 +1,7 @@
 import sys
+from collections import namedtuple
+
+Point = namedtuple('Point', 'x y')
 
 def lmap(f, it):
     return list(map(f, it))
